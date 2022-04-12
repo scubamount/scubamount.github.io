@@ -2,8 +2,21 @@
 
 *The lone and level sands stretch far away* 
 
+# What is it?
 
-# The module
+A PowerShell 7 (only) module for Windows 10 and above. Compiled and written by hand, each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets. Just type in a command and run. 
+
+You can use get-help for a command you don't understand or to learn about the optional parameters, purpose, or examples. Tasks that may normally be done by hand can be automated or simplified, and terminal autocompletions have been added for improved productivity.
+
+# How do I ensure everything works?
+
+Read this whole page.
+
+If you are still having issues, please submit an Issue or contact the author.
+
+
+
+# The Module
 
 The SALK-Utils suite has many handmade tools. 
 
@@ -23,7 +36,7 @@ The SALK-Utils suite has many handmade tools.
 > 
 > Use `Get-Help -Command <insert module command here> -Full` for my handwritten documentation
 
-## Requirements (instructions below)
+# Requirements and Dependencies
 1. [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>)
 2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules)
 3. RSAT
@@ -35,7 +48,7 @@ The SALK-Utils suite has many handmade tools.
 9. My `.cert` (located in the `pwsh7` folder)
 
 
-## MODULE SETUP
+# Installation
 ### Navigate to the `IT\Public\Techs` drive
 Inside, find my `pwsh7\Modules` directory
 
@@ -56,22 +69,22 @@ It will run a check to see if you are
 
 ***
 
-### IMPORT CUSTOM PROFILE
+# Installation continued...
 
 __After__ importing the module, you can import the custom SALK powershell profile by entering the code 
 ```powershell
 a
 ```
 
+***
+
+
 # That's it. You're all ready to use SALK-Utils.
 
 
 ***
 
-If you so desire, you can automatically import my custom Modules as well as custom public Profile
-
-
-***
+### If you so desire, you can automatically import my custom Modules as well as custom public Profile
 
 
 To create a new profile, see below
@@ -79,12 +92,12 @@ To create a new profile, see below
 ```powershell
 New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force
 ```
-### to edit file, run
+#### to edit file, run
 
 ```powershell
 notepad $PROFILE.AllUsersAllHosts
 ```
-### to find location of file, run
+#### to find location of file, run
 
 ```powershell
 $PROFILE.AllusersAllHosts
@@ -93,7 +106,7 @@ $PROFILE.AllusersAllHosts
 
 ***
 
-# SYSINTERNALS PSTOOLS
+## SYSINTERNALS PSTOOLS
 
 In the `pwsh7` folder, you will find a copy of the folder `PSTools` from Microsoft SysInternals. You can either copy this to your local drive, or download it from the Microsoft website.
 
