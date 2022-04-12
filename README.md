@@ -74,7 +74,7 @@ It will run a check to see if you are
 
 __After__ importing the module, you can import the custom SALK powershell profile by entering the code 
 ```powershell
-a
+Import-SALKProfiles
 ```
 
 ***
@@ -99,7 +99,7 @@ New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force
 notepad $PROFILE.AllUsersAllHosts
 ```
 
-Just put in your `Import-Module \\module\here` and `a` commands on separate lines in your 'Profile', and it will auto launch every time you start PowerShell.
+Just put in your `Import-Module \\module\here` and `Import-SALKProfiles` commands on separate lines in your 'Profile', and it will auto launch every time you start PowerShell.
 
 #### to find location of file, run
 
