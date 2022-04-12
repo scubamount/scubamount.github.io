@@ -7,12 +7,17 @@
 
 The SALK-Utils suite has many handmade tools. 
 
-- Copy a file from your computer to any number of remote computers `Copy-LocalToRemoteList`
-- Find a file path(s) on any number of remote computers `Find-FileOnRemoteList`
-- Run a command as your user on any number of remote computers `Invoke-CommandToRemoteList`
-- Force push SCCM updates on any number of remote computers `Invoke-SCCMInstallToList`
-- Run a program with optional parameters on any number of remote computers `Start-ProgramOnRemoteList`
-- and more...
+- Copy a file from your computer to any number of remote computers 
+  - `Copy-LocalToRemoteList`
+- Find a file path(s) on any number of remote computers 
+  - `Find-FileOnRemoteList`
+- Run a command as your user on any number of remote computers 
+  - `Invoke-CommandToRemoteList`
+- Force push SCCM updates on any number of remote computers 
+  - `Invoke-SCCMInstallToList`
+- Run a program with optional parameters on any number of remote computers 
+  - `Start-ProgramOnRemoteList`
+- **and more...**
 
 > Use `Get-Command -Module SALK-Utils` for a list of commands
 > 
