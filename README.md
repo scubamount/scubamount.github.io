@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Scuba Mount
 
 You can use the [editor on GitHub](https://github.com/scubamount/scubamount.github.io/edit/origin/README.md) to maintain and preview the content for your website in Markdown files.
 
