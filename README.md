@@ -63,7 +63,10 @@ __After__ importing the module, you can import the custom SALK powershell profil
 a
 ```
 
-That's it. You're all ready to use SALK-Utils.
+# That's it. You're all ready to use SALK-Utils.
+
+
+***
 
 If you so desire, you can automatically import my custom Modules as well as custom public Profile
 
