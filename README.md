@@ -79,18 +79,6 @@ $PROFILE.AllusersAllHosts
 ```
 
 
-
-
-***
-
-
-```powershell
-Import-Module PSReadLine
-```
-
-*(If you would like to download modules that are not able to install, then install Visual Studio (not Visual Studio Code), run as Admin, and use the 'Package manager Console')*
-
-
 ***
 
 # SYSINTERNALS PSTOOLS
