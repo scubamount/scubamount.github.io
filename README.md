@@ -98,6 +98,9 @@ New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force
 ```powershell
 notepad $PROFILE.AllUsersAllHosts
 ```
+
+Just put in your `Import-Module \\module\here` and `a` commands on separate lines in your 'Profile', and it will auto launch every time you start PowerShell.
+
 #### to find location of file, run
 
 ```powershell
