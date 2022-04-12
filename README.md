@@ -1,22 +1,37 @@
+*The lone and level sands stretch far away* 
 
-## If you are looking for salk-utils and you have access, try this
+
+
+## If you are looking for salk-utils and *you have access*, try this
 
 [SALK-Utils Page](<https://github.com/scubamount/salk--scripts>)
 
-
+## If you do not have access, continue below...
 
 # Scubamount - SALK-Utils
 
+The SALK-Util suite has many handmade tools. 
+
+- Copy a file from your computer to any number of remote computers `Copy-LocalToRemoteList`
+- Find a file path(s) on any number of remote computers `Find-FileOnRemoteList`
+- Run a command as your user on any number of remote computers `Invoke-CommandToRemoteList`
+- Force push SCCM updates on any number of remote computers `Invoke-SCCMInstallToList`
+- Run a program with optional parameters on any number of remote computers `Start-ProgramOnRemoteList`
+- and more...
+
+> Use `Get-Command -Module SALK-Utils` for a list of commands
+> 
+> Use `Get-Help -Command <insert module command here> -Full` for my handwritten documentation
 
 ## Requirements (instructions below)
 1. [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>)
 2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules)
 3. Access to the vpn
 4. SysInternals PSTools
-5. My custom profile
+5. My custom profile (included in module)
 6. `Enable-PSRemoting -Force -SkipNetworkProfileCheck -Confirm`
 7. `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force -Confirm`
-8. My `.cert`, located in the `pwsh7` folder
+8. My `.cert` (located in the `pwsh7` folder)
 
 
 ## MODULE SETUP
@@ -45,6 +60,8 @@ __After__ importing the module, you can import the custom SALK powershell profil
 ```powershell
 a
 ```
+
+That's it. You're all ready to use SALK-Utils.
 
 If you so desire, you can automatically import my custom Modules as well as custom public Profile
 
