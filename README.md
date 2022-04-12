@@ -39,13 +39,14 @@ The SALK-Utils suite has many handmade tools.
 # Requirements and Dependencies
 1. [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>)
 2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules)
-3. RSAT
-4. Access to the vpn
-5. SysInternals PSTools
-6. My custom profile (included in module)
-7. `Enable-PSRemoting -Force -SkipNetworkProfileCheck -Confirm`
-8. `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force -Confirm`
-9. My `.cert` (located in the `pwsh7` folder)
+3. An Amd64 processor, running Windows 10 or above
+4. RSAT
+5. Access to the vpn
+6. SysInternals PSTools
+7. My custom profile (included in module)
+8. `Enable-PSRemoting -Force -SkipNetworkProfileCheck -Confirm`
+9. `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force -Confirm`
+10. My `.cert` (located in the `pwsh7` folder)
 
 
 # Installation
