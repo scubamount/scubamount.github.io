@@ -64,7 +64,7 @@ Import-Module \\full\location\to\folder\SALK-Utils
 - You will now have all of my tools. If commands are listed out, then the import was successful. Errors? Scroll below...
 
 It will run a check to see if you are 
-1. on Windows
+1. on Windows with an Amd64 processor
 2. Using PowerShell 7 or above
 
 ***
