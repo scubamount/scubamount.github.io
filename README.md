@@ -37,11 +37,12 @@ There will be a folder named `SALK-Utils`
 
 
 After locating the SALK-Utils folder, You will need to run this command to import it.
-- You will now have all of my tools. If commands are listed out, then the import was successful. Errors? Scroll below...
 
 ```powershell
 Import-Module \\full\location\to\folder\SALK-Utils
 ```
+
+- You will now have all of my tools. If commands are listed out, then the import was successful. Errors? Scroll below...
 
 It will run a check to see if you are 
 1. on Windows
