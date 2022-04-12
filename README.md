@@ -10,7 +10,7 @@
 
 ## If you do not have access, continue below...
 
-# Scubamount - SALK-Utils
+# The module
 
 The SALK-Util suite has many handmade tools. 
 
