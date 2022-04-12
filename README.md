@@ -5,7 +5,7 @@
 
 # The module
 
-The SALK-Util suite has many handmade tools. 
+The SALK-Utils suite has many handmade tools. 
 
 - Copy a file from your computer to any number of remote computers `Copy-LocalToRemoteList`
 - Find a file path(s) on any number of remote computers `Find-FileOnRemoteList`
