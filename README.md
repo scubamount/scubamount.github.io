@@ -3,13 +3,6 @@
 *The lone and level sands stretch far away* 
 
 
-
-## If you are looking for salk-utils and *you have access*, try this
-
-[SALK-Utils Page](<https://github.com/scubamount/salk--scripts>)
-
-## If you do not have access, continue below...
-
 # The module
 
 The SALK-Util suite has many handmade tools. 
