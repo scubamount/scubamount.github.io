@@ -26,12 +26,125 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Formatted with Markdown (.md) syntax highlighting.
+=
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/scubamount/scubamount.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## install Visual Studio Code from official Microsoft source
 
-### Support or Contact
+<https://code.visualstudio.com/download>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+## fonts:
+
+<https://github.com/tonsky/FiraCode>
+
+
+## extensions: (run in windows terminal/pwsh)
+
+> `code --list-extensions`
+
+aaron-bond.better-comments
+
+arcticicestudio.nord-visual-studio-code
+
+bmalehorn.vscode-fish
+
+christian-kohler.path-intellisense
+
+DavidAnson.vscode-markdownlint
+
+donjayamanne.githistory
+
+DotJoshJohnson.xml
+
+eamodio.gitlens
+
+esbenp.prettier-vscode
+
+GitHub.copilot
+
+GitHub.vscode-pull-request-github
+
+gitkraken.gitkraken-authentication
+
+ionutvmi.path-autocomplete
+
+ironmansoftware.powershellprotools
+
+JonathanHarty.gruvbox-material-icon-theme
+
+lehni.vscode-fix-checksums
+
+mechatroner.rainbow-csv
+
+ms-vscode.powershell-preview
+
+oderwat.indent-rainbow
+
+PKief.material-icon-theme
+
+PKief.material-product-icons
+
+redhat.vscode-yaml
+
+sainnhe.gruvbox-material
+
+streetsidesoftware.code-spell-checker
+
+VisualStudioExptTeam.vscodeintellicode
+
+vsls-contrib.gistfs
+
+yzhang.markdown-all-in-one
+
+## installation_essentials\custom_vscode_settings.json
+copy paste into personal settings.json
+## powershell (pwsh) 7+
+
+<https://github.com/PowerShell/PowerShell/releases/tag/v7.3.0-preview.2>
+
+> `New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force`
+
+### to edit file, run
+
+> `notepad $PROFILE.AllUsersAllHosts`
+
+### to find location of file run
+
+> `$PROFILE.AllusersAllHosts`
+
+
+## pwsh_modules
+
+> `Set-PSRepository -InstallationPolicy Trusted PSGallery`
+
+> - `Import-Module PowerShellProTools`
+> - `Import-Module CimCmdlets`
+> - `Import-Module Microsoft.PowerShell.Management`
+> - `Import-Module Microsoft.powerShell.Utility`
+> - `Import-Module Microsoft.PowerShell.Security`
+> - `Import-Module Microsoft.WSMan.Management`
+> - `Import-Module ActiveDirectory`
+> - `Import-Module PSReadLine`
+
+(if not found then...) #ensure run as admin
+#$
+> - `Install-Module PowerShellProTools`
+> - `Install-Module CimCmdlets`
+> - `Install-Module Microsoft.PowerShell.Management`
+> - `Install-Module Microsoft.powerShell.Utility`
+> - `Install-Module Microsoft.PowerShell.Security`
+> - `Install-Module Microsoft.WSMan.Management`
+> - `Install-Module ActiveDirectory`
+> - `Install-Module PSReadLine`
+
+(if not able to install, then install Visual Studio (not Visual Studio Code), run as Admin, and use the 'Package manager Console')
+
+***
+
+Important note,
+
+ - You can install pwsh modules and WindowsPowershell modules utilizing Visual Studio Package manager Console run as Admin.
+ - This allow you to bypass the failed installations while running from other sources
+ - VS uses nuget
