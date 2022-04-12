@@ -21,12 +21,13 @@ The SALK-Util suite has many handmade tools.
 ## Requirements (instructions below)
 1. [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>)
 2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules)
-3. Access to the vpn
-4. SysInternals PSTools
-5. My custom profile (included in module)
-6. `Enable-PSRemoting -Force -SkipNetworkProfileCheck -Confirm`
-7. `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force -Confirm`
-8. My `.cert` (located in the `pwsh7` folder)
+3. RSAT
+4. Access to the vpn
+5. SysInternals PSTools
+6. My custom profile (included in module)
+7. `Enable-PSRemoting -Force -SkipNetworkProfileCheck -Confirm`
+8. `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force -Confirm`
+9. My `.cert` (located in the `pwsh7` folder)
 
 
 ## MODULE SETUP
@@ -64,33 +65,23 @@ If you so desire, you can automatically import my custom Modules as well as cust
 To create a new profile, see below
 
 ```powershell
-New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force`
+New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force
 ```
 ### to edit file, run
 
 ```powershell
-notepad $PROFILE.AllUsersAllHosts`
+notepad $PROFILE.AllUsersAllHosts
 ```
 ### to find location of file, run
 
 ```powershell
-$PROFILE.AllusersAllHosts`
+$PROFILE.AllusersAllHosts
 ```
 
 
 
 
 ***
-
-
-
-## Essential PowerShell Modules
-
-### You will need the following:
-
-- PSReadLine 2.2+
-- SALK-Utils 0.2.3
-- ActiveDirectory
 
 
 ```powershell
@@ -110,4 +101,3 @@ For best results, put `PSTools` into `C:\PSTools`, and the scripts will path pro
 
 
 
-***
