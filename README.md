@@ -67,13 +67,13 @@ If you run PowerShell 7 as your `Superuser` with network credentials, you can no
 Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm
 ```
 
-3. Find my module "SALK-Utils". Navigate to the `\\IT\Public\Techs\` drive. Find my name, and then go into the `pwsh7\Modules\` directory. Here you will find `SALK-Utils`.
+5. Find my module "SALK-Utils". Navigate to the `\\IT\Public\Techs\` drive. Find my name, and then go into the `pwsh7\Modules\` directory. Here you will find `SALK-Utils`.
 
 This directory will constantly be updated with new tools as well as improvements to the current tools. Please do not remove this folder.
 
 > Note: Editing this folder will break the certificate signage I have used, and at that point any tampered files will be considered malware.
 
-4. As either Admin or Superuser, Run the `Import-Module` command directing to the `~\\Salk-Utils` folder (full file path)
+6. As either Admin or Superuser, Run the `Import-Module` command directing to the `~\\Salk-Utils` folder (full file path)
 
 This will import all of my tools.
 
