@@ -36,18 +36,21 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
   - `Start-ProgramOnRemoteList`
 - **and more...**
 
+# How Do I Get It?
 
+Either see below, or contact the author...
+
+> There is no data included in this module that traces to any organization. This portable module can be used in any infrastructure with an Active Directory environment.
 # Requirements and Dependencies
 
 1. [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>)
 2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules) (optional, but will print errors if left out)
 3. An Amd64 processor, running Windows 10 or above
 4. RSAT
-5. Access to the VPN as well as Shared drives
-6. Microsoft SysInternals Suite  (PSTools included in pwsh7 folder)
-7. My custom profile (included in module)
-8. `Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm`
-9. My `.cfx` certificate (located in the `pwsh7` folder)
+5. Microsoft SysInternals Suite  (PSTools included in pwsh7 folder)
+6. My custom profile (included in module)
+7. `Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm`
+8. My `.cfx` certificate (located in the `pwsh7` folder)
 
 ***
 
