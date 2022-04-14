@@ -41,6 +41,9 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 Either see below, or contact the author...
 
 > There is no data included in this module that traces to any organization. This portable module can be used in any infrastructure with an Active Directory environment.
+
+***
+
 # Requirements and Dependencies
 
 1. [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>)
