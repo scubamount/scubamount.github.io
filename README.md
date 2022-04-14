@@ -1,7 +1,6 @@
 # SALK-Utils
 
-*The lone and level sands stretch far away* 
-
+*The lone and level sands stretch far away*
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/59990200/163192337-3a61bd0e-1050-48d7-9cd2-c448cc6f6ce9.JPG" width="300">
@@ -9,9 +8,11 @@
 
 # What is it?
 
-A PowerShell 7 (only) module for Windows 10 and above. Compiled and written by hand, each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets. Just type in a command and run. 
+A PowerShell 7 (only) module for Windows 10 and above. Compiled and written by hand, each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets. Just type in a command and run.
 
 You can use get-help for a command you don't understand or to learn about the optional parameters, purpose, or examples. Tasks that may normally be done by hand can be automated or simplified, and terminal autocompletions have been added for improved productivity.
+
+Some of the scripts will be self explanatory and tell you what you need to input in order to get your achieved result. Some will open a windows explorer box to allow you to select an object such as an .Exe on your local file system, or a .txt list of computers on your local file system. This makes each of the commands modular and scalable, and decreases the time spent by the admin trying to hardcode the commands they want.
 
 # How do I ensure everything works?
 
@@ -19,49 +20,62 @@ Read this whole page.
 
 If you are still having issues, please submit an Issue or contact the author.
 
-
-
 # The Module
 
-The SALK-Utils suite has many handmade tools. 
+The SALK-Utils PowerShell module has many handmade tools that fill multiple purposes.
 
-- Copy a file from your computer to any number of remote computers 
+- Copy a file from your computer to any number of remote computers
   - `Copy-LocalToRemoteList`
-- Find a file path(s) on any number of remote computers 
+- Find a file path(s) on any number of remote computers
   - `Find-FileOnRemoteList`
-- Run a command as your user on any number of remote computers 
+- Run a command as your user on any number of remote computers
   - `Invoke-CommandToRemoteList`
-- Force push SCCM updates on any number of remote computers 
+- Force push SCCM updates on any number of remote computers
   - `Invoke-SCCMInstallToList`
-- Run a program with optional parameters on any number of remote computers 
+- Run a program with optional parameters on any number of remote computers
   - `Start-ProgramOnRemoteList`
 - **and more...**
 
-> Use `Get-Command -Module SALK-Utils` for a list of commands
-> 
-> Use `Get-Help -Command <insert module command here> -Full` for my handwritten documentation
 
 # Requirements and Dependencies
+
 1. [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>)
-2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules)
+2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules) (optional, but will print errors if left out)
 3. An Amd64 processor, running Windows 10 or above
 4. RSAT
-5. Access to the vpn
-6. SysInternals PSTools
+5. Access to the VPN as well as Shared drives
+6. Microsoft SysInternals Suite  (PSTools included in pwsh7 folder)
 7. My custom profile (included in module)
-8. `Enable-PSRemoting -Force -SkipNetworkProfileCheck -Confirm`
-9. `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force -Confirm`
-10. My `.cert` (located in the `pwsh7` folder)
+8. `Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm`
+9. My `.cfx` certificate (located in the `pwsh7` folder)
 
+***
 
 # Installation
-### Navigate to the `IT\Public\Techs` drive
-Inside, find my `pwsh7\Modules` directory
 
-There will be a folder named `SALK-Utils`
+1. Download [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>) from the link here, or navigate to the Microsoft website and download the `.msi` there. Install as admin.
 
+2. Run PowerShell 7 as admin to make edits to your `$profile` or any other local changes.
 
-After locating the SALK-Utils folder, You will need to run this command to import it.
+If you run PowerShell 7 as your `Superuser` with network credentials, you can now invoke commands across the domain.
+
+3. You can add my certificate file by double clicking on it. This is located in the `\pwsh7` folder
+
+4. Running PowerShell7 as Admin, change the ExecutionPolicy.
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm
+```
+
+3. Find my module "SALK-Utils". Navigate to the `\\IT\Public\Techs\` drive. Find my name, and then go into the `pwsh7\Modules\` directory. Here you will find `SALK-Utils`.
+
+This directory will constantly be updated with new tools as well as improvements to the current tools. Please do not remove this folder.
+
+> Note: Editing this folder will break the certificate signage I have used, and at that point any tampered files will be considered malware.
+
+4. As either Admin or Superuser, Run the `Import-Module` command directing to the `~\\Salk-Utils` folder (full file path)
+
+This will import all of my tools.
 
 ```powershell
 Import-Module \\full\location\to\folder\SALK-Utils
@@ -69,49 +83,52 @@ Import-Module \\full\location\to\folder\SALK-Utils
 
 - You will now have all of my tools. If commands are listed out, then the import was successful. Errors? Scroll below...
 
-It will run a check to see if you are 
-1. on Windows with an Amd64 processor
-2. Using PowerShell 7 or above
-
 ***
 
-# Installation continued...
+# Usage
 
-__After__ importing the module, you can import the custom SALK powershell profile by entering the code 
+
+- Find the list of commands you can use.
+
 ```powershell
-Import-SALKProfiles
+Get-Command -Module SALK-Utils
+```
+
+- Look at the documentation, help, and examples for a specific command.
+
+```powershell
+Get-Help -Command TypeTheCommandHere -Full
+```
+
+- Run a command
+
+```powershell
+Invoke-CommandToRemoteList
 ```
 
 ***
 
-
-# That's it. You're all ready to use SALK-Utils.
-
-
-***
-
-### If you so desire, you can automatically import my custom Modules as well as custom public Profile
-
+## You can automatically import my custom Modules as well as custom public Profile
 
 To create a new profile, see below
 
 ```powershell
 New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force
 ```
+
 #### to edit file, run
 
 ```powershell
 notepad $PROFILE.AllUsersAllHosts
 ```
 
-Just put in your `Import-Module \\module\here` and `Import-SALKProfiles` commands on separate lines in your 'Profile', and it will auto launch every time you start PowerShell.
+Just put in your `Import-Module \\module\here` command  in your `$Profile`, and it will auto launch every time you start PowerShell7.
 
-#### to find location of file, run
+- to find location of file, run
 
 ```powershell
 $PROFILE.AllusersAllHosts
 ```
-
 
 ***
 
@@ -121,5 +138,4 @@ In the `pwsh7` folder, you will find a copy of the folder `PSTools` from Microso
 
 For best results, put `PSTools` into `C:\PSTools`, and the scripts will path properly.
 
-
-
+It is not essential that you download or utilize the PSTools, but some scripts may not work at all without them.
