@@ -53,27 +53,27 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 
 # Installation
 
-1. Download [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>) from the link here, or navigate to the Microsoft website and download the `.msi` there. Install as admin.
+(1)- Download [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>) from the link here, or navigate to the Microsoft website and download the `.msi` there. Install as admin.
 
-2. Run PowerShell 7 as admin to make edits to your `$profile` or any other local changes.
+(2)- Run PowerShell 7 as admin to make edits to your `$profile` or any other local changes.
 
-If you run PowerShell 7 as your `Superuser` with network credentials, you can now invoke commands across the domain.
+ If you run PowerShell 7 as your `Superuser` with network credentials, you can now invoke commands across the domain.
 
-3. You can add my certificate file by double clicking on it. This is located in the `\pwsh7` folder
+(3)- You can add my certificate file by double clicking on it. This is located in the `\pwsh7` folder
 
-4. Running PowerShell7 as Admin, change the ExecutionPolicy.
+(4)- Running PowerShell7 as Admin, change the ExecutionPolicy.
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm
 ```
 
-5. Find my module "SALK-Utils". Navigate to the `\\IT\Public\Techs\` drive. Find my name, and then go into the `pwsh7\Modules\` directory. Here you will find `SALK-Utils`.
+(5)- Find my module "SALK-Utils". Navigate to the `\\IT\Public\Techs\` drive. Find my name, and then go into the `pwsh7\Modules\` directory. Here you will find `SALK-Utils`.
 
 This directory will constantly be updated with new tools as well as improvements to the current tools. Please do not remove this folder.
 
 > Note: Editing this folder will break the certificate signage I have used, and at that point any tampered files will be considered malware.
 
-6. As either Admin or Superuser, Run the `Import-Module` command directing to the `~\\Salk-Utils` folder (full file path)
+(6)- As either Admin or Superuser, Run the `Import-Module` command directing to the `~\\Salk-Utils` folder (full file path)
 
 This will import all of my tools.
 
