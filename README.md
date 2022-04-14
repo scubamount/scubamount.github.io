@@ -6,7 +6,7 @@
 <img src="https://user-images.githubusercontent.com/59990200/163192337-3a61bd0e-1050-48d7-9cd2-c448cc6f6ce9.JPG" width="300">
 </p>
 
-# What is it?
+# What Is It?
 
 A PowerShell 7 (only) module for Windows 10 and above. Compiled and written by hand, each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets. Just type in a command and run.
 
