@@ -38,23 +38,23 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 
 # Aliases
 
-> tnc = Test-NetConnection
+> `tnc` = Test-NetConnection
 
-> ictrl = Invoke-CommandToRemoteList
+> `ictrl` = Invoke-CommandToRemoteList
 
-> flf = Find-LocalFile
+> `flf` = Find-LocalFile
 
-> fforl = Find-FileOnRemoteList
+> `fforl` = `Find-FileOnRemoteList`
 
-> cltrl = Copy-LocalToRemoteList
+> `cltrl` = `Copy-LocalToRemoteList`
 
-> isitl = Invoke-SCCMInstallToList
+> `isitl` = `Invoke-SCCMInstallToList`
 
-> iporl = Invoke-ProgramOnRemoteList
+> `iporl` = `Invoke-ProgramOnRemoteList`
 
-> iporlp = Invoke-ProgramOnRemoteListPSEXEC
+> `iporlp` = `Invoke-ProgramOnRemoteListPSEXEC`
 
-> np = notepad $profile.AllUsersAllHosts
+> `np` = `notepad $profile.AllUsersAllHosts`
 
 # How Do I Get It?
 
