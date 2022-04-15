@@ -10,7 +10,7 @@
 
 A PowerShell 7 (only) module for Windows 10 and above. Each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets/advanced functions. Just import the module and type in a command.
 
-You can use get-help for a command you don't understand or to learn about the optional parameters, purpose, or examples. Tasks that may normally be done by hand can be automated or simplified, and terminal autocompletions have been added for improved productivity.
+You can use get-help for a command you don't understand or to learn about the optional parameters, purpose, or examples. Tasks that may normally be done by hand can be automated or simplified, and terminal autocompletions and aliases have been added for improved productivity.
 
 Some of the scripts will be self explanatory and tell you what you need to input in order to get your achieved result. Some will open a windows explorer box to allow you to select an object such as an .Exe on your local file system, or a .txt list of computers on your local file system. This makes each of the commands modular and scalable, and decreases the time spent by the admin trying to hardcode the commands they want.
 
