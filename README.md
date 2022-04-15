@@ -52,6 +52,8 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 
 > iporl = Invoke-ProgramOnRemoteList
 
+> iporlp = Invoke-ProgramOnRemoteListPSEXEC
+
 > np = notepad $profile.AllUsersAllHosts
 
 # How Do I Get It?
