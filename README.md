@@ -8,7 +8,7 @@
 
 # What Is It?
 
-A PowerShell 7 (only) module for Windows 10 and above. Each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets/advanced functions. Just type in a command and run.
+A PowerShell 7 (only) module for Windows 10 and above. Each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets/advanced functions. Just import the module and type in a command.
 
 You can use get-help for a command you don't understand or to learn about the optional parameters, purpose, or examples. Tasks that may normally be done by hand can be automated or simplified, and terminal autocompletions have been added for improved productivity.
 
