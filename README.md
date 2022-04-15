@@ -24,6 +24,8 @@ If you are still having issues, please submit an Issue or contact the author.
 
 The SALK-Utils PowerShell module has many handmade tools that fill multiple purposes.
 
+- Multithreaded filename search on your local drive
+  - `Find-LocalFile`
 - Copy a file from your computer to any number of remote computers
   - `Copy-LocalToRemoteList`
 - Find a file path(s) on any number of remote computers
