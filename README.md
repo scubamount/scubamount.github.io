@@ -36,6 +36,24 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
   - `Start-ProgramOnRemoteList`
 - **and more...**
 
+# Aliases
+
+> tnc = Test-NetConnection
+
+> ictrl = Invoke-CommandToRemoteList
+
+> flf = Find-LocalFile
+
+> fforl = Find-FileOnRemoteList
+
+> cltrl = Copy-LocalToRemoteList
+
+> isitl = Invoke-SCCMInstallToList
+
+> iporl = Invoke-ProgramOnRemoteList
+
+> np = notepad $profile.AllUsersAllHosts
+
 # How Do I Get It?
 
 Either see below, or contact the author...
