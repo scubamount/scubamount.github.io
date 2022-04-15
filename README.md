@@ -33,7 +33,10 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 - Force push SCCM updates on any number of remote computers
   - `Invoke-SCCMInstallToList`
 - Run a program with optional parameters on any number of remote computers
-  - `Start-ProgramOnRemoteList`
+  - `Invoke-ProgramOnRemoteList`
+- Run a program with optional parameters on any number of remote computers using PSEXEC
+  - `Invoke-ProgramOnRemoteListPSEXEC`
+
 - **and more...**
 
 # Aliases
