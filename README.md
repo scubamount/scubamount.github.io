@@ -41,11 +41,11 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 
 # Aliases
 
-> `tnc` = Test-NetConnection
+> `tnc` = `Test-NetConnection`
 
-> `ictrl` = Invoke-CommandToRemoteList
+> `ictrl` = `Invoke-CommandToRemoteList`
 
-> `flf` = Find-LocalFile
+> `flf` = `Find-LocalFile`
 
 > `fforl` = `Find-FileOnRemoteList`
 
