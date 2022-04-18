@@ -3,7 +3,7 @@
 *The lone and level sands stretch far away*
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/59990200/163192337-3a61bd0e-1050-48d7-9cd2-c448cc6f6ce9.JPG" width="300">
+<img src="https://user-images.githubusercontent.com/59990200/163873700-9b29e4a6-0a69-41a7-8936-9ee6ed1286eb.png" width="300">
 </p>
 
 # What Is It?
