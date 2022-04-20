@@ -25,20 +25,26 @@ If you are still having issues, please submit an Issue or contact the author.
 The SALK-Utils PowerShell module has many handmade tools that fill multiple purposes.
 
 - Multithreaded filename search on your local drive
+
   - `Find-LocalFile`
 - Copy a file from your computer to any number of remote computers
+
   - `Copy-LocalToRemoteList`
 - Find a file path(s) on any number of remote computers
+
   - `Find-FileOnRemoteList`
 - Run a command as your user on any number of remote computers
+
   - `Invoke-CommandToRemoteList`
 - Force push SCCM updates on any number of remote computers
+
   - `Invoke-SCCMInstallToList`
 - Run a program with optional parameters on any number of remote computers
+
   - `Invoke-ProgramOnRemoteList`
 - Run a program with optional parameters on any number of remote computers using PSEXEC
-  - `Invoke-ProgramOnRemoteListPSEXEC`
 
+  - `Invoke-ProgramOnRemoteListPSEXEC`
 - **and more...**
 
 # Aliases
@@ -67,24 +73,24 @@ Either see below, or contact the author...
 
 > There is no data included in this module that traces to any organization. This portable module can be used in any infrastructure with an Active Directory environment.
 
-***
+---
 
 # Requirements and Dependencies
 
-1. [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>)
+1. [PowerShell 7](https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi)
 2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules) (optional, but will print errors if left out)
 3. An Amd64 processor, running Windows 10 or above
 4. RSAT
-5. Microsoft SysInternals Suite  (PSTools included in pwsh7 folder)
+5. Microsoft SysInternals Suite  (PSTools included in pwsh7 folder) (optional, only needed for PSEXEC commands)
 6. My custom profile (included in module)
 7. `Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm`
 8. My `.cfx` certificate (located in the `pwsh7` folder)
 
-***
+---
 
 # Installation
 
-(1)- Download [PowerShell 7](<https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi>) from the link here, or navigate to the Microsoft website and download the `.msi` there. Install as admin.
+(1)- Download [PowerShell 7](https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi) from the link here, or navigate to the Microsoft website and download the `.msi` there. Install as admin.
 
 (2)- Run PowerShell 7 as admin to make edits to your `$profile` or any other local changes.
 
@@ -114,10 +120,9 @@ Import-Module \\full\location\to\folder\SALK-Utils
 
 - You will now have all of my tools. If commands are listed out, then the import was successful. Errors? Scroll below...
 
-***
+---
 
 # Usage
-
 
 - Find the list of commands you can use.
 
@@ -137,7 +142,7 @@ Get-Help -Command TypeTheCommandHere -Full
 Invoke-CommandToRemoteList
 ```
 
-***
+---
 
 ## You can automatically import my custom Modules as well as custom public Profile
 
@@ -161,9 +166,9 @@ Just put in your `Import-Module \\module\here` command  in your `$Profile`, and 
 $PROFILE.AllusersAllHosts
 ```
 
-***
+---
 
-## SYSINTERNALS PSTOOLS
+## SYSINTERNALS PSTOOLS - optional
 
 In the `pwsh7` folder, you will find a copy of the folder `PSTools` from Microsoft SysInternals. You can either copy this to your local drive, or download it from the Microsoft website.
 
