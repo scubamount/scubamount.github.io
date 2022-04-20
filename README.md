@@ -8,7 +8,7 @@
 
 # What Is It?
 
-A PowerShell 7 (only) module for Windows 10 and above. Each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets/advanced functions. Just import the module and type in a command.
+A PowerShell 7 (only) module held in a NuGet package for Windows 10 and above. Each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets/advanced functions.
 
 You can use get-help for a command you don't understand or to learn about the optional parameters, purpose, or examples. Tasks that may normally be done by hand can be automated or simplified, and terminal autocompletions and aliases have been added for improved productivity.
 
@@ -104,21 +104,40 @@ Either see below, or contact the author...
 Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm
 ```
 
-(5)- Find my module "SALK-Utils". Navigate to the `\\IT\Public\Techs\` drive. Find my name, and then go into the `pwsh7\Modules\` directory. Here you will find `SALK-Utils`.
+(5)- Run these commands to ensure you are up to date and can install the NuGet PowerShell repository
+
+```powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+Install-PackageProvider -Name NuGet -Force
+
+Install-Module PowerShellGet -AllowPrerelease -Repository PSGallery -Force
+
+Install-Module PackageManagement -Force
+
+# And finally, register the PowerShell repository as trusted so you can download and import the module
+Register-PSRepository -Name ScubaMount -PublishLocation '\\network\location\to\"Modules"' -SourceLocation '\\network\location\to\"Modules"' -InstallationPolicy Trusted
+
+Import-Module SALK-Utils
+```
+
+(6)- Find my module "SALK-Utils". Navigate to the `\\IT\Public\Techs\` drive. Find my name, and then go into the `pwsh7\Modules\` directory.
 
 This directory will constantly be updated with new tools as well as improvements to the current tools. Please do not remove this folder.
 
 > Note: Editing this folder will break the certificate signage I have used, and at that point any tampered files will be considered malware.
 
-(6)- As either Admin or Superuser, Run the `Import-Module` command directing to the `~\\Salk-Utils` folder (full file path)
+(7)- As either Admin or Superuser, Run the `Import-Module` command directing to the `~\\Salk-Utils` folder (full file path)
 
 This will import all of my tools.
 
 ```powershell
-Import-Module \\full\location\to\folder\SALK-Utils
+Import-Module SALK-Utils
 ```
 
-- You will now have all of my tools. If commands are listed out, then the import was successful. Errors? Scroll below...
+- You will now have all of my tools *for your current session of powershell*. If commands are listed out, then the import was successful. Errors? Scroll below...
 
 ---
 
@@ -136,7 +155,7 @@ Get-Command -Module SALK-Utils
 Get-Help -Command TypeTheCommandHere -Full
 ```
 
-- Run a command
+- Run one of the commands
 
 ```powershell
 Invoke-CommandToRemoteList
@@ -158,7 +177,7 @@ New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force
 notepad $PROFILE.AllUsersAllHosts
 ```
 
-Just put in your `Import-Module \\module\here` command  in your `$Profile`, and it will auto launch every time you start PowerShell7.
+Just put in your `Import-Module SALK-Utils` command  in your `$Profile`, and it will auto launch every time you start PowerShell7.
 
 - to find location of file, run
 
