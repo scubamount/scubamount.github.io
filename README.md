@@ -87,7 +87,7 @@ Either see below, or contact the author...
 4. RSAT
 5. Microsoft SysInternals Suite  (PSTools included in pwsh7 folder) (optional, only needed for PSEXEC commands)
 6. My custom profile (included in module)
-7. Allowed through `Set-ExecutionPolicy`
+7. Allowance through `Set-ExecutionPolicy`
 8. My `.cfx` certificate
 
 ---
