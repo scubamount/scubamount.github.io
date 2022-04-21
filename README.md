@@ -8,11 +8,15 @@
 
 # What Is It?
 
-A PowerShell 7 (only) module held in a NuGet package for Windows 10 and above. Each script is written with PowerShell and C# and added to a central, portable location to be exported as usable Cmdlets/advanced functions.
+Leverage enterprise resources to holisticly aggregate scalable applications, utilizing flexible, interactive, and efficient processes across core infrastructures
 
-You can use get-help for a command you don't understand or to learn about the optional parameters, purpose, or examples. Tasks that may normally be done by hand can be automated or simplified, and terminal autocompletions and aliases have been added for improved productivity.
 
-Some of the scripts will be self explanatory and tell you what you need to input in order to get your achieved result. Some will open a windows explorer box to allow you to select an object such as an .Exe on your local file system, or a .txt list of computers on your local file system. This makes each of the commands modular and scalable, and decreases the time spent by the admin trying to hardcode the commands they want.
+
+A PowerShell 7 (only) module held in a NuGet package. Each script is written with PowerShell and C# and published to a portable location to be imported as usable Cmdlets/advanced functions.
+
+Use `get-help` for a command you don't understand or to learn about the optional parameters, purpose, documentation, or examples. Tasks that may normally be done by hand can be automated or simplified to appropriately deliver plug-and-play deliverables. Terminal autocompletions and aliases have been added for improved productivity.
+
+Some of the scripts will be self explanatory and describe what is needed to input in order to get a desired result. Some will open a Windows dialog/explorer box to allow the selection of an object such as an .Exe on the local file system, or a .txt or .csv list of computers. This makes each of the commands frictionless, modular, and scalable, and decreases the time spent by the admin trying to hardcode the commands they want.
 
 # How do I ensure everything works?
 
@@ -42,7 +46,7 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 - Run a program with optional parameters on any number of remote computers
 
   - `Invoke-ProgramOnRemoteList`
-- Run a program with optional parameters on any number of remote computers using PSEXEC
+- Run a program with optional parameters on any number of remote computers using Microsoft Sysinternals PSEXEC
 
   - `Invoke-ProgramOnRemoteListPSEXEC`
 - **and more...**
@@ -83,8 +87,8 @@ Either see below, or contact the author...
 4. RSAT
 5. Microsoft SysInternals Suite  (PSTools included in pwsh7 folder) (optional, only needed for PSEXEC commands)
 6. My custom profile (included in module)
-7. `Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm`
-8. My `.cfx` certificate (located in the `pwsh7` folder)
+7. Allowed through `Set-ExecutionPolicy`
+8. My `.cfx` certificate
 
 ---
 
@@ -94,7 +98,7 @@ Either see below, or contact the author...
 
 (2)- Run PowerShell 7 as admin to make edits to your `$profile` or any other local changes.
 
- If you run PowerShell 7 as your `Superuser` with network credentials, you can now invoke commands across the domain.
+ If you run PowerShell 7 as your `Superuser` with network credentials, you can now invoke commands across the network.
 
 (3)- You can add my certificate file by double clicking on it. This is located in the `\pwsh7` folder
 
@@ -123,13 +127,13 @@ Register-PSRepository -Name ScubaMount -PublishLocation '\\network\location\to\"
 Import-Module SALK-Utils
 ```
 
-(6)- Find my module "SALK-Utils". Navigate to the `\\IT\Public\Techs\` drive. Find my name, and then go into the `pwsh7\Modules\` directory.
+(6)- Find my module package, "SALK-Utils". (Location hidden for now. Contact me for info.)
 
 This directory will constantly be updated with new tools as well as improvements to the current tools. Please do not remove this folder.
 
 > Note: Editing this folder will break the certificate signage I have used, and at that point any tampered files will be considered malware.
 
-(7)- As either Admin or Superuser, Run the `Import-Module` command directing to the `~\\Salk-Utils` folder (full file path)
+(7)- As either Admin or Superuser, Run the `Import-Module` command
 
 This will import all of my tools.
 
