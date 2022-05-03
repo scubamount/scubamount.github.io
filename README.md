@@ -10,8 +10,6 @@
 
 Leverage enterprise resources to holisticly aggregate scalable applications, utilizing flexible, interactive, and efficient processes across core infrastructures
 
-
-
 A PowerShell 7 (only) module held in a NuGet package. Each script is written with PowerShell and C# and published to a portable location to be imported as usable Cmdlets/advanced functions.
 
 Use `get-help` for a command you don't understand or to learn about the optional parameters, purpose, documentation, or examples. Tasks that may normally be done by hand can be automated or simplified to appropriately deliver plug-and-play tools. Terminal autocompletions and aliases have been added for improved productivity.
@@ -36,7 +34,7 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
   - `Copy-LocalToRemoteList`
 - Find a file path(s) on any number of remote computers
 
-  - `Find-FileOnRemoteList`
+  - `Find-FileToRemoteList`
 - Run a command as your user on any number of remote computers
 
   - `Invoke-CommandToRemoteList`
@@ -45,10 +43,10 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
   - `Invoke-SCCMInstallToList`
 - Run a program with optional parameters on any number of remote computers
 
-  - `Invoke-ProgramOnRemoteList`
+  - `Invoke-ProgramToRemoteList`
 - Run a program with optional parameters on any number of remote computers using Microsoft Sysinternals PSEXEC
 
-  - `Invoke-ProgramOnRemoteListPSEXEC`
+  - `Invoke-ProgramToRemoteListPSEXEC`
 - **and more...**
 
 # Aliases
@@ -59,15 +57,15 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 
 > `flf` = `Find-LocalFile`
 
-> `fforl` = `Find-FileOnRemoteList`
+> `fftrl` = `Find-FileToRemoteList`
 
 > `cltrl` = `Copy-LocalToRemoteList`
 
 > `isitl` = `Invoke-SCCMInstallToList`
 
-> `iporl` = `Invoke-ProgramOnRemoteList`
+> `iptrl` = `Invoke-ProgramToRemoteList`
 
-> `iporlp` = `Invoke-ProgramOnRemoteListPSEXEC`
+> `iptrlp` = `Invoke-ProgramToRemoteListPSEXEC`
 
 > `np` = `notepad $profile.AllUsersAllHosts`
 
@@ -138,7 +136,7 @@ This directory will constantly be updated with new tools as well as improvements
 This will import all of my tools.
 
 ```powershell
-Import-Module SALK-Utils
+Install-Module SALK-Utils; Import-Module SALK-Utils
 ```
 
 - You will now have all of my tools *for your current session of powershell*. If commands are listed out, then the import was successful. Errors? Scroll below...
