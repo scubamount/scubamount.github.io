@@ -67,8 +67,6 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 
 > `iptrlp` = `Invoke-ProgramToRemoteListPSEXEC`
 
-> `np` = `notepad $profile.AllUsersAllHosts`
-
 # How Do I Get It?
 
 Either see below, or contact the author...
@@ -122,6 +120,8 @@ Install-Module PackageManagement -Force
 # And finally, register the PowerShell repository as trusted so you can download and import the module
 Register-PSRepository -Name ScubaMount -PublishLocation '\\network\location\to\"Modules"' -SourceLocation '\\network\location\to\"Modules"' -InstallationPolicy Trusted
 
+Install-Module SALK-Utils
+
 Import-Module SALK-Utils
 ```
 
@@ -170,21 +170,19 @@ Invoke-CommandToRemoteList
 To create a new profile, see below
 
 ```powershell
-New-Item -Path $PROFILE.AllUsersAllHosts -Type File -Force
+New-Item -Path $PROFILE -Type File -Force
 ```
 
 #### to edit file, run
 
-```powershell
 notepad $PROFILE.AllUsersAllHosts
-```
 
 Just put in your `Import-Module SALK-Utils` command  in your `$Profile`, and it will auto launch every time you start PowerShell7.
 
 - to find location of file, run
 
 ```powershell
-$PROFILE.AllusersAllHosts
+$PROFILE
 ```
 
 ---
