@@ -8,7 +8,7 @@
 
 # What Is It?
 
-Leverage enterprise resources to holisticly aggregate scalable applications, utilizing flexible, interactive, and efficient processes across core infrastructures
+Holistically aggregate easy to use PowerShell/.NET admin utilities to flexibly scale processes and drastically improve efficiency across core infrastructures that can be used long term by future techs and devs
 
 A PowerShell 7 (only) module held in a NuGet package. Each script is written with PowerShell and C# and published to a portable location to be imported as usable Cmdlets/advanced functions.
 
