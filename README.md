@@ -10,17 +10,15 @@
 
 Holistically aggregate easy to use PowerShell/.NET admin utilities to flexibly scale processes and drastically improve efficiency across core infrastructures that can be used long term by future techs and devs
 
-A PowerShell 7 (only) module held in a NuGet package. Each script is written with PowerShell and C# and published to a portable location to be imported as usable Cmdlets/advanced functions.
+A PowerShell 7 (only) module held in a NuGet package. Each script is written in PowerShell and utilizes C# and .NET classes; it is published to a portable location to be imported as usable Cmdlets/advanced functions.
 
-Use `get-help` for a command you don't understand or to learn about the optional parameters, purpose, documentation, or examples. Tasks that may normally be done by hand can be automated or simplified to appropriately deliver plug-and-play tools. Terminal autocompletions and aliases have been added for improved productivity.
+Use `get-help` for a command to learn about the optional parameters, purpose, documentation, or examples. Tasks that may normally be done by hand can be automated or simplified to appropriately deliver plug-and-play tools. Terminal autocompletions and alias dotfile examples have been added for improved productivity.
 
-Some of the scripts will be self explanatory and describe what is needed to input in order to get a desired result. Some will open a Windows dialog/explorer box to allow the selection of an object such as an .Exe on the local file system, or a .txt or .csv list of computers. This makes each of the commands frictionless, modular, and scalable, and decreases the time spent by the admin trying to hardcode the commands they want.
+Some of the scripts will be self explanatory and describe what is needed to input in order to get a desired result. Some will open a Windows dialog/explorer box to allow the selection of an object such as an .Exe on the local file system, or a .txt or .csv list of computers. This makes each of the commands frictionless, modular, and scalable, and decreases the time spent by the admin trying to hardcode the commands and instead focus on the task at hand.
 
 # How do I ensure everything works?
 
-Read this whole page.
-
-If you are still having issues, please submit an Issue or contact the author.
+Please submit an Issue or contact the author if you have any questions or suggestions.
 
 # The Module
 
