@@ -10,11 +10,15 @@
 
 Holistically aggregate easy to use PowerShell/.NET admin utilities to flexibly scale processes and drastically improve efficiency across core infrastructures that can be used long term by future techs and devs
 
-A PowerShell 7 (only) module held in a NuGet package. Each script is written in PowerShell and utilizes C# and .NET classes; it is published to a portable location to be imported as usable Cmdlets/advanced functions.
+A PowerShell 7 (only) module held in a NuGet package. Each script is written in PowerShell and utilizes C# and .NET classes; it is published to a redundantly backed up location and can be imported as usable Cmdlets/advanced functions.
 
 Use `get-help` for a command to learn about the optional parameters, purpose, documentation, or examples. Tasks that may normally be done by hand can be automated or simplified to appropriately deliver plug-and-play tools. Terminal autocompletions and alias dotfile examples have been added for improved productivity.
 
 Some of the scripts will be self explanatory and describe what is needed to input in order to get a desired result. Some will open a Windows dialog/explorer box to allow the selection of an object such as an .Exe on the local file system, or a .txt or .csv list of computers. This makes each of the commands frictionless, modular, and scalable, and decreases the time spent by the admin trying to hardcode the commands and instead focus on the task at hand.
+
+Some scripts have the added functionality of being self sufficient/detachable, with redundant functions added so they can be used as a separate entity aside from the module.
+
+**The most commonly used scripts such as `ictr` will include a check using the function `cRED` that will allow you to run a NON-elevated shell, be prompted for network administrator credentials, then store the encrypted credentials to only be used during execution of the command. This drastically increases system security when running commands, as it allows the user to prevent powershell from exposing network administrator credentials to the network.**
 
 # How do I ensure everything works?
 
@@ -23,6 +27,9 @@ Please submit an Issue or contact the author if you have any questions or sugges
 # The Module
 
 The SALK-Utils PowerShell module has many handmade tools that fill multiple purposes.
+
+* Execute request for elevated network admin credentials and store encrypted until end of session (auto included in some scripts)
+  * `cRED`
 
 - Multithreaded filename search on your local drive
 
@@ -33,9 +40,10 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 - Find a file path(s) on any number of remote computers
 
   - `Find-FileToRemoteList`
-- Run a command as your user on any number of remote computers
+- Run a command as your user on any number of remote computers, or a single computer
 
   - `Invoke-CommandToRemoteList`
+  - `Invoke-CommandToRemote`
 - Force push SCCM updates on any number of remote computers
 
   - `Invoke-SCCMInstallToList`
@@ -47,11 +55,13 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
   - `Invoke-ProgramToRemoteListPSEXEC`
 - **and more...**
 
+  The module also includes multiple test scripts that are not ready to be ran
+
 # Aliases
 
-> `tnc` = `Test-NetConnection`
-
 > `ictrl` = `Invoke-CommandToRemoteList`
+>
+> `ictr` = `Invoke-CommandToRemote`
 
 > `flf` = `Find-LocalFile`
 
@@ -65,24 +75,26 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 
 > `iptrlp` = `Invoke-ProgramToRemoteListPSEXEC`
 
+> `c` = `cRED`
+
 # How Do I Get It?
 
 Either see below, or contact the author...
 
-> There is no data included in this module that traces to any organization. This portable module can be used in any infrastructure with an Active Directory environment.
+> There is no data included in this module that traces to any organization. This portable module can be used in any infrastructure with an Azure/Active Directory or on prem AD environment.
 
 ---
 
 # Requirements and Dependencies
 
 1. [PowerShell 7](https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi)
-2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules) (optional, but will print errors if left out)
-3. An Amd64 processor, running Windows 10 or above
+2. [PSReadLine](https://github.com/scubamount/salk--modules/tree/master/mymodules) module (optional, but will print errors if left out)
+3. An Amd64 (x86) processor, running Windows 10 or above
 4. RSAT
 5. Microsoft SysInternals Suite  (PSTools included in pwsh7 folder) (optional, only needed for PSEXEC commands)
 6. My custom profile (included in module)
 7. Allowance through `Set-ExecutionPolicy`
-8. My `.cfx` certificate
+   1. (or) My `.cfx` certificate
 
 ---
 
@@ -152,7 +164,7 @@ Get-Command -Module SALK-Utils
 - Look at the documentation, help, and examples for a specific command.
 
 ```powershell
-Get-Help -Command TypeTheCommandHere -Full
+Get-Help -Command PutCommandNameHere -Full
 ```
 
 - Run one of the commands
@@ -173,9 +185,9 @@ New-Item -Path $PROFILE -Type File -Force
 
 #### to edit file, run
 
-notepad $PROFILE.AllUsersAllHosts
+`notepad $PROFILE`
 
-Just put in your `Import-Module SALK-Utils` command  in your `$Profile`, and it will auto launch every time you start PowerShell7.
+Just put in your `Import-Module SALK-Utils` command in your `$PROFILE`, and it will auto launch every time you start PowerShell7.
 
 - to find location of file, run
 
