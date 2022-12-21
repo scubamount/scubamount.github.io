@@ -82,6 +82,8 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 > `cRED` = `cRED`
 >
 > `aa` = `winget upgrade --all`
+>
+> `cutac` = `Copy-UserToAnotherComputer`
 
 
 
