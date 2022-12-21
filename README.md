@@ -62,20 +62,30 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 > `ictrl` = `Invoke-CommandToRemoteList`
 >
 > `ictr` = `Invoke-CommandToRemote`
-
+>
 > `flf` = `Find-LocalFile`
-
+>
 > `fftrl` = `Find-FileToRemoteList`
-
+>
 > `cltrl` = `Copy-LocalToRemoteList`
-
+>
 > `isitl` = `Invoke-SCCMInstallToList`
-
+>
 > `iptrl` = `Invoke-ProgramToRemoteList`
-
+>
 > `iptrlp` = `Invoke-ProgramToRemoteListPSEXEC`
+>
+> `salad` = `Set-AutoLogonandAD`
+>
+> `scap` = `Set-ChangeADPassword`
+>
+> `cRED` = `cRED`
+>
+> `aa` = `winget upgrade --all`
 
-> `c` = `cRED`
+
+
+
 
 # How Do I Get It?
 
