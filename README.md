@@ -8,7 +8,7 @@
 
 # What Is It?
 
-This PowerShell 7 module is a comprehensive collection of user-friendly admin utilities designed to optimize processes and enhance efficiency across core infrastructures. Written in PowerShell, each script leverages C# and .NET classes, and is packaged as a NuGet module published to a redundantly backed-up location, facilitating seamless importation as usable Cmdlets and advanced functions.
+This PowerShell 7 module is a comprehensive collection of user-friendly admin utilities designed to optimize processes and enhance efficiency across core infrastructures. Each script leverages C# and .NET classes, and is packaged as a NuGet module published to a redundantly backed-up location, facilitating seamless importation as usable Cmdlets and advanced functions.
 
 Documentation for each command can be accessed using the `get-help` function, providing details on optional parameters, purpose, documentation, or examples. Tasks that are typically performed manually can be streamlined and automated, delivering plug-and-play tools that improve productivity. The inclusion of terminal autocompletions and alias dotfile examples further enhances user experience.
 
