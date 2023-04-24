@@ -18,10 +18,6 @@ Certain scripts possess added functionality, allowing them to function independe
 
 Of particular note, the `ictr` script includes a `cRED` function, which performs a check to enable execution via a NON-elevated shell. Network administrator credentials are prompted for and encrypted for use solely during execution of the command. This implementation drastically enhances system security by preventing PowerShell from exposing network administrator credentials to the network.
 
-# How do I ensure everything works?
-
-Please submit an Issue or contact the author if you have any questions or suggestions.
-
 # The Module
 
 The SALK-Utils PowerShell module comprises of a set of custom-made tools with diverse functionalities. These tools are:
