@@ -8,17 +8,15 @@
 
 # What Is It?
 
-Holistically aggregate easy to use PowerShell/.NET admin utilities to flexibly scale processes and drastically improve efficiency across core infrastructures that can be used long term by future techs and devs
+This PowerShell 7 module is a comprehensive collection of user-friendly admin utilities designed to optimize processes and enhance efficiency across core infrastructures. Written in PowerShell, each script leverages C# and .NET classes, and is packaged as a NuGet module published to a redundantly backed-up location, facilitating seamless importation as usable Cmdlets and advanced functions.
 
-A PowerShell 7 (only) module held in a NuGet package. Each script is written in PowerShell and utilizes C# and .NET classes; it is published to a redundantly backed up location and can be imported as usable Cmdlets/advanced functions.
+Documentation for each command can be accessed using the `get-help` function, providing details on optional parameters, purpose, documentation, or examples. Tasks that are typically performed manually can be streamlined and automated, delivering plug-and-play tools that improve productivity. The inclusion of terminal autocompletions and alias dotfile examples further enhances user experience.
 
-Use `get-help` for a command to learn about the optional parameters, purpose, documentation, or examples. Tasks that may normally be done by hand can be automated or simplified to appropriately deliver plug-and-play tools. Terminal autocompletions and alias dotfile examples have been added for improved productivity.
+Commands may prompt the user for input or utilize a Windows dialog/explorer box to facilitate object selection, such as .Exe files on the local file system or .txt or .csv lists of computers. This results in frictionless, modular, and scalable commands, reducing the time required to hardcode commands and enabling admins to focus on their core tasks.
 
-Some of the scripts will be self explanatory and describe what is needed to input in order to get a desired result. Some will open a Windows dialog/explorer box to allow the selection of an object such as an .Exe on the local file system, or a .txt or .csv list of computers. This makes each of the commands frictionless, modular, and scalable, and decreases the time spent by the admin trying to hardcode the commands and instead focus on the task at hand.
+Certain scripts possess added functionality, allowing them to function independently of the module, with redundant functions included for this purpose.
 
-Some scripts have the added functionality of being self sufficient/detachable, with redundant functions added so they can be used as a separate entity aside from the module.
-
-**The most commonly used scripts such as `ictr` will include a check using the function `cRED` that will allow you to run a NON-elevated shell, be prompted for network administrator credentials, then store the encrypted credentials to only be used during execution of the command. This drastically increases system security when running commands, as it allows the user to prevent powershell from exposing network administrator credentials to the network.**
+Of particular note, the `ictr` script includes a `cRED` function, which performs a check to enable execution via a NON-elevated shell. Network administrator credentials are prompted for and encrypted for use solely during execution of the command. This implementation drastically enhances system security by preventing PowerShell from exposing network administrator credentials to the network.
 
 # How do I ensure everything works?
 
@@ -26,36 +24,26 @@ Please submit an Issue or contact the author if you have any questions or sugges
 
 # The Module
 
-The SALK-Utils PowerShell module has many handmade tools that fill multiple purposes.
+The SALK-Utils PowerShell module comprises of a set of custom-made tools with diverse functionalities. These tools are:
 
-* Execute request for elevated network admin credentials and store encrypted until end of session (auto included in some scripts)
-  * `cRED`
+* `cRED`:
+  * facilitates the execution of requests for elevated network admin credentials, which are encrypted and stored until the end of the session (automatic inclusion in some scripts).
+* `Find-LocalFile`:
+  * allows for a multithreaded filename search on a local drive.
+* `Copy-LocalToRemoteList`:
+  * enables file copying from a local computer to any number of remote computers.
+* `Find-FileToRemoteList`:
+  * locates file path(s) on any number of remote computers.
+* `Invoke-CommandToRemoteList` and `Invoke-CommandToRemote`:
+  * allow running a command as the user on any number of remote computers, or a single computer.
+* `Invoke-SCCMInstallToList`:
+  * facilitates the forced push of SCCM updates on any number of remote computers.
+* `Invoke-ProgramToRemoteList`:
+  * allows running a program with optional parameters on any number of remote computers.
+* `Invoke-ProgramToRemoteListPSEXEC`:
+  * allows running a program with optional parameters on any number of remote computers using Microsoft Sysinternals PSEXEC.
 
-- Multithreaded filename search on your local drive
-
-  - `Find-LocalFile`
-- Copy a file from your computer to any number of remote computers
-
-  - `Copy-LocalToRemoteList`
-- Find a file path(s) on any number of remote computers
-
-  - `Find-FileToRemoteList`
-- Run a command as your user on any number of remote computers, or a single computer
-
-  - `Invoke-CommandToRemoteList`
-  - `Invoke-CommandToRemote`
-- Force push SCCM updates on any number of remote computers
-
-  - `Invoke-SCCMInstallToList`
-- Run a program with optional parameters on any number of remote computers
-
-  - `Invoke-ProgramToRemoteList`
-- Run a program with optional parameters on any number of remote computers using Microsoft Sysinternals PSEXEC
-
-  - `Invoke-ProgramToRemoteListPSEXEC`
-- **and more...**
-
-  The module also includes multiple test scripts that are not ready to be ran
+The module also includes multiple test scripts that are not yet ready to be executed.
 
 # Aliases
 
@@ -84,10 +72,6 @@ The SALK-Utils PowerShell module has many handmade tools that fill multiple purp
 > `aa` = `winget upgrade --all`
 >
 > `cutac` = `Copy-UserToAnotherComputer`
-
-
-
-
 
 # How Do I Get It?
 
