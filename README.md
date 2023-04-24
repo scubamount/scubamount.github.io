@@ -8,9 +8,9 @@
 
 # What Is It?
 
-This PowerShell 7 module is a comprehensive collection of user-friendly admin utilities designed to optimize processes and enhance efficiency across core infrastructures. Each script leverages C# and .NET classes, and is packaged as a NuGet module published to a redundantly backed-up location, facilitating seamless importation as usable Cmdlets and advanced functions.
+This PowerShell 7 module is a comprehensive collection of user-friendly admin utilities designed to optimize processes and enhance efficiency across core infrastructures. Each script can leverage C# and .NET classes, and is packaged as a NuGet module published to a redundantly backed-up location, facilitating seamless importation as usable Cmdlets and advanced functions.
 
-Documentation for each command can be accessed using the `get-help` function, providing details on optional parameters, purpose, documentation, or examples. Tasks that are typically performed manually can be streamlined and automated, delivering plug-and-play tools that improve productivity. The inclusion of terminal autocompletions and alias dotfile examples further enhances user experience.
+Documentation for each command can be accessed using the `get-help` function, providing details on optional parameters, purpose, or examples. Tasks that are typically performed manually can be streamlined and automated, delivering plug-and-play tools that improve productivity. The inclusion of terminal autocompletions and alias dotfile examples further enhances user experience.
 
 Commands may prompt the user for input or utilize a Windows dialog/explorer box to facilitate object selection, such as .Exe files on the local file system or .txt or .csv lists of computers. This results in frictionless, modular, and scalable commands, reducing the time required to hardcode commands and enabling admins to focus on their core tasks.
 
@@ -23,21 +23,27 @@ Of particular note, the `ictr` script includes a `cRED` function, which performs
 The SALK-Utils PowerShell module comprises of a set of custom-made tools with diverse functionalities. These tools are:
 
 * `cRED`:
-  * facilitates the execution of requests for elevated network admin credentials, which are encrypted and stored until the end of the session (automatic inclusion in some scripts).
+  * Facilitates the execution of requests for elevated network admin credentials, which are encrypted and stored until the end of the session (automatic inclusion in some scripts).
 * `Find-LocalFile`:
-  * allows for a multithreaded filename search on a local drive.
+  * Proof of concept, allows for a multithreaded filename search on a local drive.
 * `Copy-LocalToRemoteList`:
-  * enables file copying from a local computer to any number of remote computers.
+  * Enables verbose file copying/overwrite from a local computer to any scalable number of remote computers.
 * `Find-FileToRemoteList`:
-  * locates file path(s) on any number of remote computers.
+  * Locates file path(s) based on named parameters on any scalable number of remote computers.
 * `Invoke-CommandToRemoteList` and `Invoke-CommandToRemote`:
-  * allow running a command as the user on any number of remote computers, or a single computer.
+  * Allow running a command as the user on any scalable number of remote computers, or a single computer utilizing a custom integrated fast ping and credentials check.
 * `Invoke-SCCMInstallToList`:
-  * facilitates the forced push of SCCM updates on any number of remote computers.
+  * Facilitates the forced push of SCCM installation on any scalable number of remote computers.
 * `Invoke-ProgramToRemoteList`:
-  * allows running a program with optional parameters on any number of remote computers.
+  * Allows running a program from the local machine with optional parameters to be executed on any scalable number of remote computers.
 * `Invoke-ProgramToRemoteListPSEXEC`:
-  * allows running a program with optional parameters on any number of remote computers using Microsoft Sysinternals PSEXEC.
+  * Allows running a program from the local machine with optional parameters on any scalable number of remote computers using Microsoft Sysinternals PSEXEC.
+* `Set-AutoLogonAndAD`
+  * Invokes a command to any scalable list of remote machines that copies an encryption executable and uses regex syntax to change the password based on dynamic hostname, changes the password in Active Directory, deletes and adds fresh registry files, and then executes the encryption process on the auto logon machine. It records each action to a local log.
+* `Copy-UserToAnotherComputer`
+  * Invokes a command to a remote secondary machine which copies the user folder over from a remote primary machine and overwrites the user folder
+* `Set-ChangeADPassword`
+  * Quickly change the password of a user
 
 The module also includes multiple test scripts that are not yet ready to be executed.
 
@@ -73,7 +79,7 @@ The module also includes multiple test scripts that are not yet ready to be exec
 
 Either see below, or contact the author...
 
-> There is no data included in this module that traces to any organization. This portable module can be used in any infrastructure with an Azure/Active Directory or on prem AD environment.
+> There is no data included in this module that traces to any organization. This portable module can be used in any infrastructure with an Azure/Active Directory or on premises Active Directory environment.
 
 ---
 
