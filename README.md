@@ -96,15 +96,10 @@ Either see below, or contact the author...
 
 # Installation
 
-(1)- Download [PowerShell 7](https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi) from the link here, or navigate to the Microsoft website and download the `.msi` there. Install as admin.
-
-(2)- Run PowerShell 7 as admin to make edits to your `$profile` or any other local changes.
-
- If you run PowerShell 7 as your `Superuser` with network credentials, you can now invoke commands across the network.
-
-(3)- You can add my certificate file by double clicking on it. This is located in the `\pwsh7` folder
-
-(4)- Running PowerShell7 as Admin, change the ExecutionPolicy.
+1. Download [PowerShell 7](https://github.com/PowerShell/PowerShell/releases/download/v7.3.0-preview.3/PowerShell-7.3.0-preview.3-win-x64.msi) or obtain the `.msi` from the Microsoft website, and install it as an administrator.
+2. Launch PowerShell 7 with administrative privileges to modify your `$profile` or perform other local changes. Running PowerShell 7 with your network credentials as the `Superuser` allows you to invoke commands across the network.
+3. Double-click on the certificate file located in the `\pwsh7` folder to add it to your system.
+4. Change the ExecutionPolicy while running PowerShell 7 as an administrator to run the scripts in this repository.
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force -Confirm
@@ -131,23 +126,17 @@ Install-Module SALK-Utils
 Import-Module SALK-Utils
 ```
 
-(6)- Find my module package, "SALK-Utils". (Location hidden for now. Contact me for info.)
+This directory is frequently updated with additional tools and enhanced versions of existing tools. Please refrain from deleting this directory.
 
-This directory will constantly be updated with new tools as well as improvements to the current tools. Please do not remove this folder.
+It is important to note that any modifications to this directory will compromise the certificate signature, and any tampered files will be deemed malicious.
 
-> Note: Editing this folder will break the certificate signage I have used, and at that point any tampered files will be considered malware.
-
-(7)- As either Admin or Superuser, Run the `Import-Module` command
-
-This will import all of my tools.
+To import all the available tools, execute the `Import-Module` command as either an Admin or Superuser.
 
 ```powershell
 Install-Module SALK-Utils; Import-Module SALK-Utils
 ```
 
 - You will now have all of my tools *for your current session of powershell*. If commands are listed out, then the import was successful. Errors? Scroll below...
-
----
 
 # Usage
 
@@ -191,12 +180,10 @@ Just put in your `Import-Module SALK-Utils` command in your `$PROFILE`, and it w
 $PROFILE
 ```
 
----
-
 ## SYSINTERNALS PSTOOLS - optional
 
-In the `pwsh7` folder, you will find a copy of the folder `PSTools` from Microsoft SysInternals. You can either copy this to your local drive, or download it from the Microsoft website.
+The `pwsh7` folder contains a replica of Microsoft SysInternals' `PSTools` folder, which you can either download from Microsoft's website or copy to your local drive.
 
-For best results, put `PSTools` into `C:\PSTools`, and the scripts will path properly.
+To ensure optimal performance, it is recommended to place `PSTools` in `C:\PSTools` to facilitate proper pathing of the scripts.
 
-It is not essential that you download or utilize the PSTools, but some scripts may not work at all without them.
+Although not mandatory, failure to use the `PSTools` may cause certain scripts to malfunction.
