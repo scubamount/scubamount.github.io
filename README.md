@@ -10,11 +10,19 @@
 
 This PowerShell 7 module is a comprehensive collection of user-friendly admin utilities designed to optimize processes and enhance efficiency across core infrastructures. Each script can leverage C# and .NET classes, and is packaged as a NuGet module published to a redundantly backed-up location, facilitating seamless importation as usable Cmdlets and advanced functions.
 
-Documentation for each command can be accessed using the `get-help` function, providing details on optional parameters, purpose, or examples. Tasks that are typically performed manually can be streamlined and automated, delivering plug-and-play tools that improve productivity. The inclusion of terminal autocompletions and alias dotfile examples further enhances user experience.
+Integrated documentation for each command can be accessed using the `get-help` function, providing details on optional parameters, purposes, or examples. Tasks that are typically performed manually can be streamlined and even automated. These are plug-and-play tools that improve productivity. The inclusion of terminal autocompletions and alias dotfile examples further enhances user experience.
+
+
+--
+
+Further reading
 
 Commands may prompt the user for input or utilize a Windows dialog/explorer box to facilitate object selection, such as .Exe files on the local file system or .txt or .csv lists of computers. This results in frictionless, modular, and scalable commands, reducing the time required to hardcode commands and enabling admins to focus on their core tasks.
 
-Certain scripts possess added functionality, allowing them to function independently of the module, with redundant functions included for this purpose.
+Certain scripts possess added functionality by including all relevant functions and programs compiled directly, allowing them to function independently of the module.
+
+
+--
 
 Of particular note, the `ictr` script includes a `cRED` function, which performs a check to enable execution via a NON-elevated shell. Network administrator credentials are prompted for and encrypted for use solely during execution of the command. This implementation drastically enhances system security by preventing PowerShell from exposing network administrator credentials to the network.
 
@@ -33,9 +41,9 @@ The SALK-Utils PowerShell module comprises of a set of custom-made tools with di
 * `Invoke-CommandToRemoteList` and `Invoke-CommandToRemote`:
   * Allow running a command as the user on any scalable number of remote computers, or a single computer utilizing a custom integrated fast ping and credentials check.
 * `Invoke-SCCMInstallToList`:
-  * Facilitates the forced push of SCCM installation on any scalable number of remote computers.
+  * Facilitates the forced push of SCCM installation on any scalable number of remote computers. Can run for an infinite amount of time, is completely open source, and infinitely scalable.
 * `Invoke-ProgramToRemoteList`:
-  * Allows running a program from the local machine with optional parameters to be executed on any scalable number of remote computers.
+  * Allows running a program (exe) from the local machine with optional parameters to be executed on any scalable number of remote computers.
 * `Invoke-ProgramToRemoteListPSEXEC`:
   * Allows running a program from the local machine with optional parameters on any scalable number of remote computers using Microsoft Sysinternals PSEXEC.
 * `Set-AutoLogonAndAD`
@@ -43,7 +51,7 @@ The SALK-Utils PowerShell module comprises of a set of custom-made tools with di
 * `Copy-UserToAnotherComputer`
   * Invokes a command to a remote secondary machine which copies the user folder over from a remote primary machine and overwrites the user folder
 * `Set-ChangeADPassword`
-  * Quickly change the password of a user
+  * Quickly and securely change the password of a user
 
 The module also includes multiple test scripts that are not yet ready to be executed.
 
