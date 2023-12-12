@@ -32,6 +32,7 @@ The SALK-Utils PowerShell module comprises of a set of custom-made tools with di
   * Facilitates the execution of requests for elevated network admin credentials, which are encrypted and stored until the end of the session (automatic inclusion in some scripts).
 * `Set-ComputerAdminRights`
   * Using a multi layered menu, allows the admin to easily choose between bulk users/computers and single user/computer, where they can then choose to bulk Add or Remove admin rights, or Single Add or Remove admin rights from machines or users.
+  * ![1702415964766](image/README/1702415964766.png)
 * `Find-LocalFile`:
   * Proof of concept, allows for a multithreaded filename search on a local drive.
 * `Copy-LocalToRemoteList`:
