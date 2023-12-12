@@ -12,7 +12,6 @@ This PowerShell 7 module is a comprehensive collection of user-friendly admin ut
 
 Integrated documentation for each command can be accessed using the `get-help` function, providing details on optional parameters, purposes, or examples. Tasks that are typically performed manually can be streamlined and even automated. These are plug-and-play tools that improve productivity. The inclusion of terminal autocompletions and alias dotfile examples further enhances user experience.
 
-
 --
 
 Further reading
@@ -20,7 +19,6 @@ Further reading
 Commands may prompt the user for input or utilize a Windows dialog/explorer box to facilitate object selection, such as .Exe files on the local file system or .txt or .csv lists of computers. This results in frictionless, modular, and scalable commands, reducing the time required to hardcode commands and enabling admins to focus on their core tasks.
 
 Certain scripts possess added functionality by including all relevant functions and programs compiled directly, allowing them to function independently of the module.
-
 
 --
 
@@ -32,12 +30,14 @@ The SALK-Utils PowerShell module comprises of a set of custom-made tools with di
 
 * `cRED`:
   * Facilitates the execution of requests for elevated network admin credentials, which are encrypted and stored until the end of the session (automatic inclusion in some scripts).
+* `Set-ComputerAdminRights`
+  * Using a multi layered menu, allows the admin to easily choose between bulk users/computers and single user/computer, where they can then choose to bulk Add or Remove admin rights, or Single Add or Remove admin rights from machines or users.
 * `Find-LocalFile`:
   * Proof of concept, allows for a multithreaded filename search on a local drive.
 * `Copy-LocalToRemoteList`:
   * Enables verbose file copying/overwrite from a local computer to any scalable number of remote computers.
 * `Find-FileToRemoteList`:
-  * Locates file path(s) based on named parameters on any scalable number of remote computers.
+  * Locates file path(s) based on named parameters on any scalable number of remote computers and export all the data paths of the chosen filter to a local csv.
 * `Invoke-CommandToRemoteList` and `Invoke-CommandToRemote`:
   * Allow running a command as the user on any scalable number of remote computers, or a single computer utilizing a custom integrated fast ping and credentials check.
 * `Invoke-SCCMInstallToList`:
@@ -49,7 +49,7 @@ The SALK-Utils PowerShell module comprises of a set of custom-made tools with di
 * `Set-AutoLogonAndAD`
   * Invokes a command to any scalable list of remote machines that copies an encryption executable and uses regex syntax to change the password based on dynamic hostname, changes the password in Active Directory, deletes and adds fresh registry files, and then executes the encryption process on the auto logon machine. It records each action to a local log.
 * `Copy-UserToAnotherComputer`
-  * Invokes a command to a remote secondary machine which copies the user folder over from a remote primary machine and overwrites the user folder
+  * Invokes a command to a remote secondary machine which copies the user folder over from a remote primary machine and overwrites the user folder. This allows the administrator to easily transfer user profiles in a background process which is useful for computer transfers
 * `Set-ChangeADPassword`
   * Quickly and securely change the password of a user
 
@@ -76,6 +76,8 @@ The module also includes multiple test scripts that are not yet ready to be exec
 > `salad` = `Set-AutoLogonandAD`
 >
 > `scap` = `Set-ChangeADPassword`
+>
+> `scar` = `Set-ComputerAdminRights`
 >
 > `cRED` = `cRED`
 >
